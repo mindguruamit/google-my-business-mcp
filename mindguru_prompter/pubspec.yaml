@@ -1,0 +1,70 @@
+name: mindguru_prompter
+description: "MindGuru Prompter – premium personal teleprompter with a full camera studio (HD to 8K), VoiceTrack and a floating prompter."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  # camera 0.12 (real FPS + stabilization control) needs Flutter 3.44+.
+  sdk: ^3.12.0
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State
+  flutter_bloc: ^9.1.1
+  equatable: ^3.0.0
+
+  # Storage (offline-first)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.6
+  path: ^1.9.1
+  uuid: ^4.6.0
+
+  # Camera studio
+  camera: ^0.12.1
+  permission_handler: ^12.0.3
+  gal: ^2.3.3
+  wakelock_plus: ^1.8.0
+
+  # Floating prompter (Android overlay; iOS uses native PiP)
+  flutter_overlay_window: ^0.5.0
+
+  # VoiceTrack: platform recognizer (40+ locales) + Vosk offline
+  speech_to_text: ^7.5.0
+  vosk_flutter_service: ^0.1.2
+
+  # Script import (txt, pdf, docx, rtf) + Google Drive
+  file_picker: ^13.1.0
+  syncfusion_flutter_pdf: ^34.2.9
+  archive: ^4.3.0
+  xml: ^7.0.1
+  googleapis: ^17.0.0
+  googleapis_auth: ^2.3.4
+  google_sign_in: ^7.2.0
+  http: ^1.6.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Inter-ExtraBold.ttf
+          weight: 800
